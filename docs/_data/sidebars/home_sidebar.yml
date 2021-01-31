@@ -11,10 +11,10 @@ entries:
       url: /
     - output: web,pdf
       title: nb2bear
-      url: core.html
+      url: nb2bear.html
     - output: web,pdf
       title: Title
-      url: nb2bear.html
+      url: runner.html
     output: web
     title: nb2bear
   output: web

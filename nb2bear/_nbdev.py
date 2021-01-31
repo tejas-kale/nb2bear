@@ -2,9 +2,39 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"say_hello": "00_core.ipynb"}
+index = {"italics_regex": "00_nb2bear.ipynb",
+         "bold_regex": "00_nb2bear.ipynb",
+         "header_regex": "00_nb2bear.ipynb",
+         "header_starts": "00_nb2bear.ipynb",
+         "code_start": "00_nb2bear.ipynb",
+         "list_start": "00_nb2bear.ipynb",
+         "s4": "00_nb2bear.ipynb",
+         "indents": "00_nb2bear.ipynb",
+         "quote_start": "00_nb2bear.ipynb",
+         "img_start": "00_nb2bear.ipynb",
+         "xcall_path": "00_nb2bear.ipynb",
+         "load_nb": "00_nb2bear.ipynb",
+         "parse_nb": "00_nb2bear.ipynb",
+         "convert_nb_to_markdown": "00_nb2bear.ipynb",
+         "get_nb_images": "00_nb2bear.ipynb",
+         "convert_to_pb_markup": "00_nb2bear.ipynb",
+         "are_empty": "00_nb2bear.ipynb",
+         "is_header": "00_nb2bear.ipynb",
+         "is_indented": "00_nb2bear.ipynb",
+         "is_code_marker": "00_nb2bear.ipynb",
+         "is_empty_line_after_header": "00_nb2bear.ipynb",
+         "quote_if_code_output": "00_nb2bear.ipynb",
+         "format_markdown": "00_nb2bear.ipynb",
+         "convert_markdown_to_html": "00_nb2bear.ipynb",
+         "add_images_to_html": "00_nb2bear.ipynb",
+         "get_nb_title": "00_nb2bear.ipynb",
+         "trash_existing_note": "00_nb2bear.ipynb",
+         "add_to_bear": "00_nb2bear.ipynb",
+         "convert_nb_to_bear": "00_nb2bear.ipynb",
+         "run_nb2bear": "01_runner.ipynb"}
 
-modules = ["core.py"]
+modules = ["nb2bear.py",
+           "runner.py"]
 
 doc_url = "https://tejas-kale.github.io/nb2bear/"
 
