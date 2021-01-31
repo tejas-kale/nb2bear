@@ -31,10 +31,9 @@ index = {"italics_regex": "00_nb2bear.ipynb",
          "trash_existing_note": "00_nb2bear.ipynb",
          "add_to_bear": "00_nb2bear.ipynb",
          "convert_nb_to_bear": "00_nb2bear.ipynb",
-         "run_nb2bear": "01_runner.ipynb"}
+         "run_nb2bear": "00_nb2bear.ipynb"}
 
-modules = ["nb2bear.py",
-           "runner.py"]
+modules = ["nb2bear.py"]
 
 doc_url = "https://tejas-kale.github.io/nb2bear/"
 

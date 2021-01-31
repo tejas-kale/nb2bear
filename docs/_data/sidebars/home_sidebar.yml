@@ -12,9 +12,6 @@ entries:
     - output: web,pdf
       title: nb2bear
       url: nb2bear.html
-    - output: web,pdf
-      title: Title
-      url: runner.html
     output: web
     title: nb2bear
   output: web

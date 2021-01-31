@@ -4,7 +4,8 @@ __all__ = ['italics_regex', 'bold_regex', 'header_regex', 'header_starts', 'code
            'quote_start', 'img_start', 'xcall_path', 'load_nb', 'parse_nb', 'convert_nb_to_markdown', 'get_nb_images',
            'convert_to_pb_markup', 'are_empty', 'is_header', 'is_indented', 'is_code_marker',
            'is_empty_line_after_header', 'quote_if_code_output', 'format_markdown', 'convert_markdown_to_html',
-           'add_images_to_html', 'get_nb_title', 'trash_existing_note', 'add_to_bear', 'convert_nb_to_bear']
+           'add_images_to_html', 'get_nb_title', 'trash_existing_note', 'add_to_bear', 'convert_nb_to_bear',
+           'run_nb2bear']
 
 # Cell
 # hide
@@ -15,6 +16,7 @@ from urllib.request import urlopen
 from urllib.parse import quote
 from typing import Union
 
+import argparse
 import bs4
 import json
 import markdown2
@@ -182,3 +184,17 @@ def convert_nb_to_bear(nb_fn: str, api_token: str, layout: str = "compact"):
     else:
         formatted_md: str = format_markdown(md_text)
         add_to_bear(formatted_md, api_token)
+
+# Cell
+def run_nb2bear():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-f", "--file", required=True, help="Path to Jupyter notebook")
+    ap.add_argument("-t", "--token", required=True, help="Bear token")
+    ap.add_argument("-l", "--layout", default="compact", const="compact", nargs="?", choices=("compact", "comfortable"),
+                    help="Layout of Bear note")
+    args = vars(ap.parse_args())
+    convert_nb_to_bear(args["file"], args["token"], args["layout"])
+
+# Cell
+if __name__ == "__main__":
+    run_nb2bear()
